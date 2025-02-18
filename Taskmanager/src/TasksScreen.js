@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet, Modal, TextInput, Alert, FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, Button, Modal, TextInput, Alert, FlatList, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { database } from './FirebaseConfig';
 import { ref, set, onValue, remove, update } from 'firebase/database';
-import styles from './style'; // Import styles
+import styles from './style'; 
 
 const TaskManager = () => {
   const [modalVisible, setModalVisible] = useState(false);
