@@ -46,6 +46,11 @@ const TaskManager = () => {
       completed: false,
     })
     .then(() => {
+      // Prepend the new task to the existing tasks
+      setTasks(prevTasks => [
+        { id: Date.now().toString(), name: taskName, detail: taskDetail, completed: false },
+        ...prevTasks,
+      ]);
       Alert.alert('Success', 'Task added successfully!');
       setModalVisible(false);
       setTaskName('');
